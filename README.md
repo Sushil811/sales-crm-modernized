@@ -1,8 +1,8 @@
 # 🚀 Canova CRM: Modern Sales Management
 
-Hey! Welcome to the **Canova CRM** repository. This project was built to solve a simple problem: making sales workflows feel less like a chore and more like a high-performance dashboard. 
+"It's a smart Sales CRM designed to make life easier for both managers and sales reps. Instead of messy spreadsheets, it gives the Admin a clean dashboard to see how many leads are assigned, which ones are closing, and how the team is performing.
 
-Whether you're an admin trying to keep track of the big picture or a sales rep managing your daily hustle, this app has your back.
+On the other hand, Sales Employees get their own focused panel. They can check-in for the day, manage their breaks, and see exactly which leads they need to call next. We’ve used 'Hot, Warm, and Cold' categories so they can prioritize the most important deals instantly. It’s all about speed, data visibility, and a smooth user experience."
 
 ## 🌟 What is this?
 
