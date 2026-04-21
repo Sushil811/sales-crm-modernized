@@ -23,8 +23,15 @@ app.use(cors());
 
 // Database Connection
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/sales_crm')
-    .then(() => console.log('MongoDB Connected'))
-    .catch(err => console.log('MongoDB Connection Error:', err));
+    .then(() => console.log('✅ MongoDB Connected Successfully'))
+    .catch(err => {
+        console.error('❌ MongoDB Connection Error Details:');
+        console.error('Error Name:', err.name);
+        console.error('Error Message:', err.message);
+        if (err.message.includes('buffering timed out')) {
+            console.error('PRO TIP: This usually means your IP is not whitelisted on MongoDB Atlas.');
+        }
+    });
 
 const upload = multer({ dest: 'uploads/' });
 const JWT_SECRET = process.env.JWT_SECRET || 'crm_secret_key';
@@ -455,7 +462,8 @@ app.get('/api/attendance/dashboard-summary/:userId', async (req, res) => {
 // Serve Static Assets in Production
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/dist')));
-    app.get('*', (req, res) => {
+    // Use /(.*) instead of * for compatibility with newer path-to-regexp
+    app.get('/(.*)', (req, res) => {
         res.sendFile(path.resolve(__dirname, '../client', 'dist', 'index.html'));
     });
 }
