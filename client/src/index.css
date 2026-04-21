@@ -242,6 +242,10 @@ body {
 }
 
 .mobile-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 .mobile-nav-link {
   display: flex;
