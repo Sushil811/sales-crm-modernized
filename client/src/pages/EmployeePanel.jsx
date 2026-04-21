@@ -254,16 +254,9 @@ const EmployeePanel = ({ user }) => {
     };
 
     return (
-        <div style={{ background: '#f8f9fb', minHeight: '100vh', paddingBottom: '110px', fontFamily: "'Outfit', sans-serif" }}>
-            {/* Header Section from Image */}
-            <div style={{ 
-                background: 'linear-gradient(180deg, #2b59ff 0%, #1a47ff 100%)', 
-                padding: '40px 25px 60px 25px', 
-                borderBottomLeftRadius: '30px', 
-                borderBottomRightRadius: '30px',
-                position: 'relative',
-                overflow: 'hidden'
-            }}>
+        <div className="employee-panel-container">
+            {/* Header Section */}
+            <div className="employee-header">
                 <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '200px', height: '200px', borderRadius: '50%', background: 'rgba(255,255,255,0.05)' }}></div>
                 <div style={{ fontSize: '1.4rem', fontWeight: 800, marginBottom: '25px' }}>
                     <span style={{ color: '#fff' }}>Canova</span>
@@ -446,30 +439,6 @@ const EmployeePanel = ({ user }) => {
                 </div>
             </div>
 
-            {/* Bottom Navigation */}
-            <div style={{ 
-                position: 'fixed', bottom: 0, left: 0, right: 0, background: '#fff', 
-                borderTop: '1px solid #f1f5f9', padding: '15px 25px', display: 'flex', 
-                justifyContent: 'space-between', alignItems: 'center', zIndex: 1000,
-                boxShadow: '0 -4px 20px rgba(0,0,0,0.03)'
-            }}>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px', color: '#2b59ff' }}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                    <span style={{ fontSize: '0.75rem', fontWeight: 800 }}>Home</span>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px', opacity: 0.4 }}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                    <span style={{ fontSize: '0.75rem', fontWeight: 700 }}>Leads</span>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px', opacity: 0.4 }}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                    <span style={{ fontSize: '0.75rem', fontWeight: 700 }}>Schedule</span>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px', opacity: 0.4 }}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                    <span style={{ fontSize: '0.75rem', fontWeight: 700 }}>Profile</span>
-                </div>
-            </div>
         </div>
     );
 };
