@@ -3,20 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const BottomNav = () => {
     return (
-        <nav style={{
-            position: 'fixed',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: '80px',
-            background: '#fff',
-            display: 'flex',
-            justifyContent: 'space-around',
-            alignItems: 'center',
-            borderTop: '1px solid #f1f5f9',
-            zIndex: 1000,
-            paddingBottom: 'env(safe-area-inset-bottom)'
-        }}>
+        <nav className="bottom-nav">
             <NavLink to="/" style={({ isActive }) => ({
                 display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px',
                 textDecoration: 'none', color: isActive ? '#2b59ff' : '#9ca3af',
