@@ -9,14 +9,8 @@ services:
       - key: NODE_ENV
         value: production
       - key: MONGODB_URI
-        fromDatabase:
-          name: canova-db
-          property: connectionString
+        sync: false
       - key: JWT_SECRET
         generateValue: true
       - key: PORT
         value: 5000
-
-databases:
-  - name: canova-db
-    plan: free
